@@ -10,9 +10,15 @@ namespace Hello.Controllers
 {
     public class HomeController : Controller
     {
+        private GreetingViewModel _model;
+        public HomeController()
+        {
+            _model = new GreetingViewModel();
+        }
         public IActionResult Index()
         {
-            return View();
+
+            return View("Index",_model);
         }
 
         public IActionResult About()

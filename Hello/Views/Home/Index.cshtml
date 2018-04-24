@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @model Hello.Models.GreetingViewModel
+    
 }
 
 <div>
-    <h1>Hello DevOps!!!</h1>
+    <h1>Hello, @Model.GreetingMessage , DevOps!!!</h1>
 </div>
